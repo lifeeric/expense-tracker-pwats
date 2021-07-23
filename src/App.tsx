@@ -1,12 +1,15 @@
-import React from 'react';
-import ExpenseCard from './Components/ExpenseCard';
-import './App.css';
+import React from "react";
+import ExpenseCard from "./Components/ExpenseCard";
+import "./App.css";
+import { TransactionProvider } from "./Components/ExpenseContext";
 
 function App() {
   return (
-    <div>
-      <ExpenseCard/>
-    </div>
+    <TransactionProvider>
+      <div>
+        <ExpenseCard />
+      </div>
+    </TransactionProvider>
   );
 }
 
